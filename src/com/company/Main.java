@@ -6,13 +6,14 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
+        System.out.println("Task 1 and 2");
         System.out.println("Put in number: ");
         int any_number = scanner.nextInt();
 
         if (any_number % 2 == 0) {
-            System.out.println("Number is even");
+            System.out.println(any_number + " is even");
         } else {
-            System.out.println("Number is odd");
+            System.out.println(any_number + " is odd");
         }
 
         task3();
@@ -23,21 +24,23 @@ public class Main {
     }
     static void task3(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Task 3");
         System.out.println("Please insert number: ");
         int number = scanner.nextInt();
 
         if (number > 0) {
-            System.out.println("Number greater than 0");
+            System.out.println(number + " is greater than 0");
         } else if (number < 0) {
-            System.out.println("Number is less than 0");
-        } else if (number == 0) {
-            System.out.println("Number is equal to 0");
+            System.out.println(number + " is less than 0");
+        } else {
+            System.out.println(number + " is equal to 0");
         }
 
 
     }
     static void task4(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Task 4");
         System.out.println("Please insert height:");
         int height = scanner.nextInt();
 

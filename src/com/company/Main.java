@@ -19,6 +19,8 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
+
 
 
     }
@@ -67,11 +69,24 @@ public class Main {
     }
     static void task6(){
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Please insert income:");
         double income = scanner.nextDouble();
 
-        double tax;
+        if (income < 85528) {
+            System.out.println("Your taxes: " + ((income * 0.18) - 556.02));
+        } else {
+            System.out.println("Your taxes: " + (14839.02 + (0.32 * (income - 85528))));
+        }
 
+    }
+    static void task7(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please insert amount: ");
+        double amount = scanner.nextDouble();
+
+        System.out.println("Please insert number of installments: ");
+        int numberOfInstallments = scanner.nextInt();
 
     }
 }

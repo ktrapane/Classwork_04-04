@@ -41,10 +41,12 @@ public class Main {
     static void task4(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Task 4");
-        System.out.println("Please insert height:");
+        System.out.println("Let's have fun! (or not)");
+
+        System.out.println("Please insert height in cm:");
         int height = scanner.nextInt();
 
-        System.out.println("Please insert weight: ");
+        System.out.println("Please insert weight in kg: ");
         float weight = scanner.nextFloat();
 
         if (height > 150 && weight <= 180) {
@@ -55,7 +57,8 @@ public class Main {
     }
     static void task5(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please insert temperature: ");
+        System.out.println("Task 5");
+        System.out.println("Please insert temperature in Celsius: ");
 
         float tempInCelsius = scanner.nextFloat();
         double tempInFahrenheit = (tempInCelsius * 1.8 + 32.0);

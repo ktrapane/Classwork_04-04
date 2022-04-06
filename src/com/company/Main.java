@@ -20,6 +20,8 @@ public class Main {
         task4();
         task5();
         task6();
+        task6_David_version();
+        task7();
 
 
 
@@ -70,6 +72,7 @@ public class Main {
     static void task6(){
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Welcome to the income tax calculator!");
         System.out.println("Please insert income:");
         double income = scanner.nextDouble();
 
@@ -80,6 +83,23 @@ public class Main {
         }
 
     }
+    static void task6_David_version(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome");
+
+        System.out.println("Insert income");
+        double income = scanner.nextDouble();
+
+        double tax;
+
+        if (income <= 85528) {
+            tax = (0.18 * income) - 556.02;
+        } else {
+            tax = 14839.02 + 0.32 * (income - 85528);
+        }
+        System.out.println("Personal income tax for " + income + "is: " + tax);
+    }
     static void task7(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please insert amount: ");
@@ -87,6 +107,12 @@ public class Main {
 
         System.out.println("Please insert number of installments: ");
         int numberOfInstallments = scanner.nextInt();
+
+        if (amount < 100 && amount > 10000) {
+            if (numberOfInstallments < 6 && numberOfInstallments > 48) {
+                System.out.println("Loan amount set to 5000");
+            }
+        }
 
     }
 }

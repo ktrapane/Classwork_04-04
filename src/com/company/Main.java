@@ -16,11 +16,11 @@ public class Main {
             System.out.println(any_number + " is odd");
         }
 
-        task3();
-        task4();
-        task5();
-        task6();
-        task6_David_version();
+//        task3();
+ //       task4();
+ //       task5();
+//        task6();
+ //       task6_David_version();
         task7();
 
 
@@ -102,17 +102,40 @@ public class Main {
     }
     static void task7(){
         Scanner scanner = new Scanner(System.in);
+        //Print welcome message
+        System.out.println("Welcome to the loan installments payment calculator!");
+
         System.out.println("Please insert amount: ");
         double amount = scanner.nextDouble();
 
         System.out.println("Please insert number of installments: ");
         int numberOfInstallments = scanner.nextInt();
 
-        if (amount < 100 && amount > 10000) {
-            if (numberOfInstallments < 6 && numberOfInstallments > 48) {
-                System.out.println("Loan amount set to 5000");
-            }
+        if (amount < 100) {
+            System.out.println("Amount should be between 100 and 10000");
+        } else if (amount > 10000) {
+            amount = 5000;
+            System.out.println("Amount set to 5000 because loan cannot exceed 10000");
+        }
+        if (numberOfInstallments < 6) {
+            System.out.println("Installment should be between 6 & 48");
+        } else if (numberOfInstallments > 48) {
+            numberOfInstallments = 36;
+            System.out.println("Installment set to 36 bedcause cannot exceed 48");
         }
 
+        double payment_without_interest = amount / numberOfInstallments;
+
+        double interest;
+        //Create condition to calculate interest on loan based on the number of instalments
+        if (numberOfInstallments <= 12) {
+            interest = amount * 0.025;
+        } else if (numberOfInstallments <= 24 ) {
+            interest = amount * 0.05;
+        } else {
+            interest = amount * 0.1;
+        }
+        double payment_with_interest = interest / numberOfInstallments;
+        System.out.println("Amount to be paid per month with interest is: " + (payment_with_interest + payment_without_interest));
     }
 }
